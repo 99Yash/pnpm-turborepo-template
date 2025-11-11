@@ -56,7 +56,8 @@
     "@tanstack/react-query": "^5.85.5",
     "better-auth": "catalog:",
     "@ciaran/api": "workspace:*",
-    "@ciaran/auth": "workspace:*"
+    "@ciaran/auth": "workspace:*",
+    "@ciaran/db": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",
