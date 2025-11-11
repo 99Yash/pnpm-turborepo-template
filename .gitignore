@@ -12,6 +12,7 @@ build
 .env
 .env*.local
 !.env.example
+.pnpm-store
 
 # IDEs and editors
 .vscode/*
