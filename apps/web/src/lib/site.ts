@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: 'Olivia',
-  url: 'https://olivia.ygkr.live',
-  ogImage: 'https://olivia.ygkr.live/og.png',
-  description: 'The most sophisticated AI assistant for building your resume',
+  name: 'Your App Name',
+  url: 'https://your-app.com',
+  ogImage: 'https://your-app.com/og.png',
+  description: 'Your app description goes here',
   links: {
-    twitter: 'https://x.com/YashGouravKar1/',
-    github: 'https://github.com/99yash',
-    website: 'https://ygkr.live',
+    twitter: 'https://x.com/yourusername',
+    github: 'https://github.com/yourusername/your-repo',
+    website: 'https://your-website.com',
   },
 } as const;
