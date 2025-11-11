@@ -1,7 +1,7 @@
 "use client";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "~/lib/auth-client";
 import { useQuery } from "@tanstack/react-query";
-import { trpc } from "@/utils/trpc";
+import { trpc } from "~/utils/trpc";
 
 export default function Dashboard({
 	session,
