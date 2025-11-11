@@ -8,7 +8,7 @@ import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Spinner } from '~/components/ui/spinner';
 import { authClient } from '~/lib/auth/client';
-import { AuthOptionsType } from '~/lib/constants';
+import type { AuthOptionsType } from '~/lib/constants';
 import {
   getErrorMessage,
   getLocalStorageItem,
