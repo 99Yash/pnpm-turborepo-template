@@ -7,7 +7,7 @@ import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
 import 'dotenv/config';
 import { Elysia } from 'elysia';
 
-const app = new Elysia({ adapter: node() })
+new Elysia({ adapter: node() })
   .use(
     cors({
       origin: process.env.CORS_ORIGIN || '',

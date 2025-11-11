@@ -6,12 +6,8 @@ import { toast } from 'sonner';
 import { Button } from '~/components/ui/button';
 import { Spinner } from '~/components/ui/spinner';
 import { authClient } from '~/lib/auth/client';
-import {
-  AuthOptionsType,
-  getProviderById,
-  OAUTH_PROVIDERS,
-  OAuthProviderId,
-} from '~/lib/constants';
+import type { AuthOptionsType, OAuthProviderId } from '~/lib/constants';
+import { getProviderById, OAUTH_PROVIDERS } from '~/lib/constants';
 import {
   getErrorMessage,
   getLocalStorageItem,

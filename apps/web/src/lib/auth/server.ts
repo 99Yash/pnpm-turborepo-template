@@ -1,22 +1,8 @@
-import { db } from '@ciaran/db';
-import * as schema from '@ciaran/db/schemas';
-import { betterAuth } from 'better-auth';
-import { drizzleAdapter } from 'better-auth/adapters/drizzle';
+import { createAuthServerClient } from '@ciaran/auth';
 
-export const auth = betterAuth({
-  database: drizzleAdapter(db, {
-    provider: 'pg',
-    schema,
-  }),
-  emailAndPassword: {
-    enabled: true,
-  },
-  socialProviders: {
-    google: {
-      display: 'popup',
-      prompt: 'select_account',
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    },
-  },
-});
+const SERVER_URL =
+  process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3001';
+
+// Auth client for server-side operations in Next.js
+// This makes HTTP calls to the auth server
+export const authServer = createAuthServerClient(SERVER_URL);

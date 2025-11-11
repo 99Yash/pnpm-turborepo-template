@@ -1,11 +1,8 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import * as z from 'zod/v4';
-import {
-  LOCAL_STORAGE_SCHEMAS,
-  LocalStorageKey,
-  LocalStorageValue,
-} from './constants';
+import type { LocalStorageKey, LocalStorageValue } from './constants';
+import { LOCAL_STORAGE_SCHEMAS } from './constants';
 import { AppError } from './errors';
 
 export function cn(...inputs: ClassValue[]) {
