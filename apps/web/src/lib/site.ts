@@ -1,11 +1,15 @@
 export const siteConfig = {
-  name: 'Your App Name',
+  name: 'pnpm turborepo template',
   url: 'https://your-app.com',
   ogImage: 'https://your-app.com/og.png',
-  description: 'Your app description goes here',
+  description:
+    'A minimal and lovely monorepo template made by Yash. Next.js frontend, Elysia.js server. Better-auth authentication. Drizzle ORM database. TailwindCSS for styling. Shadcn/ui for components. TypeScript for type safety. Pnpm for package management. Turborepo for building and development. ',
   links: {
-    twitter: 'https://x.com/yourusername',
-    github: 'https://github.com/yourusername/your-repo',
-    website: 'https://your-website.com',
+    x: 'https://x.com/YashGouravKar1',
+    github: 'https://git.new/ygkr',
+    githubAccount: 'https://github.com/99Yash',
+    web: 'https://dub.sh/yashk',
+    linkedin: 'https://dub.sh/lnkedin',
+    mail: 'yashgouravkar@gmail.com',
   },
 } as const;

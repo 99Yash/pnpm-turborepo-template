@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Button } from '~/components/ui/button';
+import { GitHub, LinkedIn, Mail, X } from '~/components/ui/icons';
+import { siteConfig } from '~/lib/site';
 
 export default function Home() {
   return (
@@ -28,23 +30,16 @@ export default function Home() {
       <main className="relative z-10 flex w-full max-w-4xl flex-col items-center justify-center px-6 py-16 text-center">
         <div className="mb-12">
           <h1 className="heading-xl mb-6 text-balance text-foreground">
-            Olivia
+            {siteConfig.name}
           </h1>
           <p className="text-balance text-xl text-muted-foreground sm:text-2xl lg:text-3xl">
-            The most <span className="text-emphasis">sophisticated</span> AI
-            assistant for building your{' '}
-            <span className="text-highlight">resume</span>
+            {siteConfig.description}
           </p>
         </div>
 
         <div className="mb-12 max-w-2xl">
           <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
-            Transform your career with{' '}
-            <span className="font-semibold text-foreground">
-              AI-powered resume building
-            </span>
-            . Create professional, ATS-optimized resumes that stand out to
-            employers and land you your dream job.
+            {siteConfig.description}
           </p>
         </div>
 
@@ -61,6 +56,42 @@ export default function Home() {
               </span>
             </Link>
           </Button>
+        </div>
+
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-6">
+          <Link
+            href={siteConfig.links.x}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <X className="h-5 w-5 transition-transform group-hover:scale-110" />
+          </Link>
+
+          <Link
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <GitHub className="h-5 w-5 transition-transform group-hover:scale-110" />
+          </Link>
+
+          <Link
+            href={siteConfig.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <LinkedIn className="h-5 w-5 transition-transform group-hover:scale-110" />
+          </Link>
+
+          <Link
+            href={`mailto:${siteConfig.links.mail}`}
+            className="group flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Mail className="h-5 w-5 transition-transform group-hover:scale-110" />
+          </Link>
         </div>
       </main>
     </div>
