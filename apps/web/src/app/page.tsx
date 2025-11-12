@@ -32,9 +32,6 @@ export default function Home() {
           <h1 className="heading-xl mb-6 text-balance text-foreground">
             {siteConfig.name}
           </h1>
-          <p className="text-balance text-xl text-muted-foreground sm:text-2xl lg:text-3xl">
-            {siteConfig.description}
-          </p>
         </div>
 
         <div className="mb-12 max-w-2xl">
