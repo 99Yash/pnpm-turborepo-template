@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.ogImage],
     site: siteConfig.url,
-    creator: siteConfig.links.twitter,
-    creatorId: siteConfig.links.twitter,
+    creator: siteConfig.links.x,
+    creatorId: siteConfig.links.x,
   },
 };
 
