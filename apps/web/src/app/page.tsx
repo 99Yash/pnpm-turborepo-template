@@ -1,13 +1,18 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import { Button } from '~/components/ui/button';
 import { GitHub, LinkedIn, Mail, X } from '~/components/ui/icons';
 import { authClient } from '~/lib/auth/client';
 import { siteConfig } from '~/lib/site';
+import { trpc } from '~/lib/trpc';
 
 export default function Home() {
   const { data: session } = authClient.useSession();
+  const { data: healthCheck, isLoading } = useQuery(
+    trpc.healthCheck.queryOptions()
+  );
   return (
     <div className="relative flex h-full items-center justify-center overflow-hidden bg-background">
       {/* Decorative gradient burst - top left */}
@@ -34,8 +39,11 @@ export default function Home() {
       <main className="relative z-10 flex w-full max-w-4xl flex-col items-center justify-center px-6 py-16 text-center">
         <div className="mb-12">
           <h1 className="heading-xl mb-6 text-balance text-foreground">
-            {siteConfig.name || session?.user?.name}
+            {session?.user?.name || siteConfig.name}
           </h1>
+          <p className="text-sm text-muted-foreground">
+            {isLoading ? 'Loading...' : healthCheck}
+          </p>
         </div>
 
         <div className="mb-12 max-w-2xl">
