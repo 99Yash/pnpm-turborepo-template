@@ -1,6 +1,8 @@
+import { QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from 'next-themes';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { Toaster } from 'sonner';
+import { queryClient } from '~/lib/trpc';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +13,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange
     >
       <Toaster richColors closeButton theme="system" />
-      <NuqsAdapter>{children}</NuqsAdapter>
+      <QueryClientProvider client={queryClient}>
+        <NuqsAdapter>{children}</NuqsAdapter>
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }
